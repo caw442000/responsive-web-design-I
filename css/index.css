@@ -156,7 +156,9 @@ header nav a {
 	width: 170px;
     padding: 1% 0;
     margin-top: 2%;
-	font-size: 1.1em;
+    font-size: 1.1em;
+    background-color: white;
+    border-color: black;
 }
 
 .main {

@@ -69,40 +69,56 @@ h1, h2, h3, h4, h5 {
 	width: 900px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	vertical-align: top;
+    vertical-align: top;
+    height: 100%;
+    margin-top: 1%;
 }
 
 header {
-	height: 60px;
+	height: 8%;
 	vertical-align: top;
-	display:flex;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* margin-top: 6%; */
 }
 
 header nav {
-	display: inline-block;
-	margin-top: 20px;
-	margin-right: 125px;
-	height: 35px;
-	vertical-align: top;
+    display: flex;
+    align-items: center;
+    width: 67%;
+    justify-content: space-between;
+    /*  */
+	/* margin-top: 20px; */
+	/* margin-right: 125px; */
+	/* height: 35px; */
+	/* vertical-align: top; */
 }
 
 header nav a {
-	margin: 20px;
+    /* margin: 20px; */
+    /* margin: 3%; */
 	color: gray;
 	text-decoration: none;
 }
 
 .logo {
-	margin-top: 10px;
+    /* margin-top: 10px; */
+    
 }
 
 .content-double {
-	display: inline-block;
+	/* display: inline-block; */
 }
 
 .banner {
-	display: flex;
-	border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 1px solid black; */
+    align-items: center;
+    padding: 5% 0;
+    justify-content: space-between;
 }
 
 
@@ -113,32 +129,50 @@ header nav a {
 	vertical-align: top;
 	/* display: inline-block; */
 	width: 49.5%;
-	height: 400px;
-	margin: 20px 0;
+	height: 30%;
+	/* margin: 3% 0; */
+}
+
+.banner .banner-image {
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: top;
+	/* display: inline-block; */
+	width: 49.5%;
+	height: 30%;
+	/* margin: 3% 0; */
 }
 
 .banner .banner-text#b-text {
-	padding-top: 40px;
+	/* padding-top: 4%; */
 }
 
 .banner .banner-text h1 {
-	font-size: 80px;
+	font-size: 400%;
 	/* display: inline-block; */
 }
 
 .banner .banner-text button {
+
 	width: 170px;
-	padding: 7px 0;
-	font-size: 1.1em;
+    padding: 1% 0;
+    margin-top: 2%;
+    font-size: 1.1em;
+    background-color: white;
+    border-color: black;
 }
 
 .main {
 	vertical-align: top;
-	display:flex;
+    display:flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+
+    
 }
 
 .main .main-content {
-	padding: 25px 10px;
+	padding: 3% 0;
 }
 .main .main-content {
 	width: 49.5%;	
@@ -146,17 +180,29 @@ header nav a {
 }
 .content {
 	display: flex;
-	border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
+    width:100%;
+    justify-content: space-between;
+}
+
+.pic-content {
+    /*  padding: 1% 1%; */
+    display: flex;
+    max-width:100%;
+}
+
+img {
+    max-width:100%;
 }
 
 .pic-content .middle-img {
-	padding: 10px 10px;
+	/*  padding: 1% 1%; */
 }
 
 .content .content-triple {
-	width: 33%;
+	width: 30%;
 	/* display: inline-block; */
-	padding: 25px 10px;
+	padding: 2% 0;
 }
 
 .contact {
@@ -218,9 +264,9 @@ footer {
 	border: 1px solid black;
 	flex-direction:column;
 	background: lightgrey;
-	padding: 20px;
+	padding: 2%;
 	width: 47%;
-	margin: 20px 0px;
+	margin: 2% 0px;
 }
 
 .service-text button {
@@ -284,3 +330,178 @@ ul.facts-list {
 	padding:6px 8px 8px 0px;
 }
 
+/* media query 800px */
+@media (max-width: 800px){
+    
+    /* Header Adjustment */
+
+    .container{
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+    }
+    .container header {
+        display: flex;
+        flex-direction: column-reverse;
+        /* width:   90%; */
+        height: 100vh;
+        justify-content: space-between;
+      }
+
+      .container header nav {
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 4%;
+      }
+
+      /* Banner adjustment */
+    .container .banner {
+        /* width: 90%; */
+        justify-content: center;
+        align-items: center;
+
+       
+    }
+    
+    .container .banner .banner-image{
+        display:none;
+    }
+
+    .container .banner .banner-text{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    /* Top Text adjustment */
+    .container .main {
+        /* width: 90%; */
+
+    }
+}
+
+
+@media (max-width: 500px){
+    
+    
+    .container{
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* header for mobile */
+    .container header {
+        display: flex;
+        flex-direction: column-reverse;
+        width:   100%;
+        height: 100vh;
+        /* margin:25% 0; */
+        padding:4% 0;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+
+        
+      }
+
+      .container header nav {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom:3%;
+        /* padding-top:0%; */
+        margin:0;
+
+
+        /* height: 80%; */
+        /* height: 5%; */
+
+        /* margin-top: 4%; */
+
+
+        /* border-bottom: 1px solid black; */
+
+      }
+
+      .logo{
+        max-width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom:3%;        
+
+      }
+
+    .container header div{
+        display:flex;
+        justify-content: center;
+        width:100%;
+        border-bottom: 1px solid black;
+
+
+    }
+      .container header nav a{
+        display:flex;
+        width:100%;
+        justify-content: center;
+        padding: 3% 0;
+        border-bottom: 1px solid black;
+
+      }
+
+      /* Banner adjustment for mobile */
+    .container .banner {
+        /* width: 90%; */
+        justify-content: center;
+        align-items: center;
+
+       
+    }
+    
+    .container .banner .banner-image{
+        display:none;
+    }
+
+    .container .banner .banner-text{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    /* Top text adjustment for mobile */
+    .container .main {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        border:
+    }
+    .container .main .main-content{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+/* Bottom text mobile */
+    .container .content {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding: 2% 0;
+    }
+    .container .content .content-triple{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    
+}
